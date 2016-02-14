@@ -20,21 +20,20 @@ public class TestDTOs extends TestCase {
 
 	public void testAvailableJobDTO() {
 
-		availableJob = new AvailableJob("A4", true, 10, false);
+		availableJob = new AvailableJob("A4", 10, 20, true);
 		assertTrue(availableJob.isSingleSided());
-		assertEquals(10, availableJob.getCents());
-		assertEquals("A4", availableJob.getPapertype());
-		assertFalse(availableJob.isColour());
+		assertEquals(10, availableJob.getCentsBlack());
+		assertEquals(20, availableJob.getCentsColour());
 
-		availableJob.setCents(20);
+		availableJob.setCentsBlack(20);
 		availableJob.setPapertype("A3");
 		availableJob.setSingleSided(false);
-		availableJob.setColour(true);
+		availableJob.setCentsColour(25);
 
 		assertFalse(availableJob.isSingleSided());
-		assertEquals(20, availableJob.getCents());
+		assertEquals(20, availableJob.getCentsBlack());
 		assertEquals("A3", availableJob.getPapertype());
-		assertTrue(availableJob.isColour());
+		assertEquals(25, availableJob.getCentsColour());
 	}
 	
 	

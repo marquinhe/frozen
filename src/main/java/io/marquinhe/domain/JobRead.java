@@ -31,6 +31,7 @@ public class JobRead {
 		this.singleSided = singleSided;
 		this.blackCount = black;
 		this.colourCount = colour;
+		this.papertype = "A4";
 	}
 	
 	public String getPapertype() {

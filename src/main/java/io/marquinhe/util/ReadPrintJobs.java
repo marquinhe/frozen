@@ -24,14 +24,13 @@ public class ReadPrintJobs {
 				if (tempStr.length == 3) {
 					int black = Integer.parseInt(tempStr[0].trim());
 					int colour = Integer.parseInt(tempStr[1].trim());
-					boolean singleSided = !Boolean.parseBoolean(tempStr[2]
-							.trim()); // ! as document shows doubleSided not
-										// singleSided
+					boolean singleSided = Boolean.parseBoolean(tempStr[2]
+							.trim()); 
+					singleSided = !singleSided; // Reading singleSided not doubleSided
+					
+					System.out.println(black+"-"+ colour+"-"+ singleSided);
 
 					JobRead job = new JobRead(black, colour, singleSided);
-
-					//System.out.println(black + "-" + colour + "- "+ singleSided);
-
 					jobSet.add(job);
 				}
 			}

@@ -14,24 +14,17 @@ public class AvailableJob {
 
 	private String papertype;
 	private boolean singleSided;
-	private int cents;
-	private boolean colour;
+	private int centsBlack;
+	private int centsColour;
 
-	public AvailableJob(String papertype, boolean singleSided, int cost, boolean colour) {
+	public AvailableJob(String papertype, int centsBlack, int centsColour, boolean singleSided) {
 		super();
 		this.papertype = papertype;
 		this.singleSided = singleSided;
-		this.cents = cost;
-		this.colour = colour;
+		this.centsBlack = centsBlack;
+		this.centsColour = centsColour;
 	}
 
-	
-	public AvailableJob(boolean singleSided, int cost, boolean colour) {
-		super();
-		this.singleSided = singleSided;
-		this.cents = cost;
-		this.colour = colour;
-	}
 	
 	public String getPapertype() {
 		return papertype;
@@ -49,20 +42,20 @@ public class AvailableJob {
 		this.singleSided = singleSided;
 	}
 
-	public int getCents() {
-		return cents;
+	public int getCentsBlack() {
+		return centsBlack;
 	}
 
-	public void setCents(int cost) {
-		this.cents = cost;
+	public void setCentsBlack(int centsBlack) {
+		this.centsBlack = centsBlack;
 	}
 
-	public boolean isColour() {
-		return colour;
+	public int getCentsColour() {
+		return centsColour;
 	}
 
-	public void setColour(boolean colour) {
-		this.colour = colour;
+	public void setCentsColour(int centsColour) {
+		this.centsColour = centsColour;
 	}
 	
 	

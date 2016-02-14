@@ -2,27 +2,15 @@
    "availableJobs":[  
       {  
          "type":"A4",
-         "cents":"15",
-         "singleSided":true,
-         "colour":false
+         "cents-black":"15",
+         "cents-colour":"25",
+         "singleSided":true
       },
       {  
          "type":"A4",
-         "cents":"25",
-         "singleSided":true,
-         "colour":true
-      },
-      {  
-         "type":"A4",
-         "cents":"10",
-         "singleSided":false,
-         "colour":false
-      },
-      {  
-         "type":"A4",
-         "cents":"20",
-         "singleSided":false,
-         "colour":true
+         "cents-black":"10",
+         "cents-colour":"20",
+         "singleSided":false
       }
    ]
 }

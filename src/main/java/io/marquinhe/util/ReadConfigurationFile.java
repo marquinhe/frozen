@@ -41,15 +41,15 @@ public class ReadConfigurationFile {
 				try {
 					JSONObject entry = (JSONObject) iterator.next();
 					String type = (String) entry.get("type");
-					int cents = Integer.parseInt((String) entry.get("cents"));
-					boolean colour = (Boolean) entry.get("colour");
+					int centsBlack = Integer.parseInt((String) entry.get("cents-black"));
+					int centsColour = Integer.parseInt((String) entry.get("cents-colour"));
 					boolean singleSided = (Boolean) entry.get("singleSided");
 
 					// generate entry for every type of job
 					
 					//System.out.println("");
-					AvailableJob availableJob = new AvailableJob(type, singleSided, cents, colour);
-					dictionary.put(type+"-"+singleSided+"-"+colour, availableJob);
+					AvailableJob availableJob = new AvailableJob(type, centsBlack, centsColour, singleSided);
+					dictionary.put(type+"-s-"+singleSided, availableJob);
 					
 
 				} catch (Exception e) {

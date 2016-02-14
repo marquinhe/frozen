@@ -4,6 +4,8 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
+import io.marquinhe.domain.*;
+
 /**
  * Unit test for simple App.
  */
