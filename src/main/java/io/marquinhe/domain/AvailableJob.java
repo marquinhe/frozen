@@ -25,6 +25,14 @@ public class AvailableJob {
 		this.colour = colour;
 	}
 
+	
+	public AvailableJob(boolean singleSided, int cost, boolean colour) {
+		super();
+		this.singleSided = singleSided;
+		this.cents = cost;
+		this.colour = colour;
+	}
+	
 	public String getPapertype() {
 		return papertype;
 	}

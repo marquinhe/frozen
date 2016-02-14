@@ -12,50 +12,52 @@ package io.marquinhe.domain;
 
 public class JobRead {
 
-	private String papertype;
+	private String papertype;			//Just in case of extending document type in the future ie A3
 	private boolean singleSided;
-	private int quantity;
-	private boolean colour;
-
-	public JobRead(String papertype, boolean singleSided, int quantity, boolean colour) {
+	private int blackCount;
+	private int colourCount;
+	
+	
+	public JobRead(String papertype,int black, int colour,  boolean singleSided) {
 		super();
 		this.papertype = papertype;
 		this.singleSided = singleSided;
-		this.quantity = quantity;
-		this.colour = colour;
+		this.blackCount = black;
+		this.colourCount = colour;
 	}
-
+	
+	public JobRead(int black, int colour,  boolean singleSided) {
+		super();
+		this.singleSided = singleSided;
+		this.blackCount = black;
+		this.colourCount = colour;
+	}
+	
 	public String getPapertype() {
 		return papertype;
 	}
-
 	public void setPapertype(String papertype) {
 		this.papertype = papertype;
 	}
-
 	public boolean isSingleSided() {
 		return singleSided;
 	}
-
 	public void setSingleSided(boolean singleSided) {
 		this.singleSided = singleSided;
 	}
-
-	public int getQuantity() {
-		return quantity;
+	public int getBlack() {
+		return blackCount;
 	}
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
+	public void setBlack(int black) {
+		this.blackCount = black;
 	}
-
-	public boolean isColour() {
-		return colour;
+	public int getColour() {
+		return colourCount;
 	}
-
-	public void setColour(boolean colour) {
-		this.colour = colour;
+	public void setColour(int colour) {
+		this.colourCount = colour;
 	}
+	
 
 	
 	

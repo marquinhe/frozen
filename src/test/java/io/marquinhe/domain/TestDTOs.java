@@ -40,21 +40,18 @@ public class TestDTOs extends TestCase {
 	
 	public void testReadJobDTO() {
 
-		jobRead = new JobRead("A4", true, 10, false);
+		jobRead = new JobRead(10, 20, true);
 		assertTrue(jobRead.isSingleSided());
-		assertEquals(10, jobRead.getQuantity());
-		assertEquals("A4", jobRead.getPapertype());
-		assertFalse(jobRead.isColour());
+		assertEquals(10, jobRead.getBlack());
+		assertEquals(20, jobRead.getColour());
 
-		jobRead.setQuantity(20);
-		jobRead.setPapertype("A3");
+		jobRead.setBlack(20);
+		jobRead.setColour(10);
 		jobRead.setSingleSided(false);
-		jobRead.setColour(true);
 
 		assertFalse(jobRead.isSingleSided());
-		assertEquals(20, jobRead.getQuantity());
-		assertEquals("A3", jobRead.getPapertype());
-		assertTrue(jobRead.isColour());
+		assertEquals(20, jobRead.getBlack());
+		assertEquals(10, jobRead.getColour());
 	}
 
 }
