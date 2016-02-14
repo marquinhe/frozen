@@ -38,8 +38,10 @@ public class CalculateCostImpl extends Jobs implements CalculateCost {
 
 	}
 
-	private int calculate(String type, int blackCount, int colourCount, int centsBlack,
+	private int calculate(String type, int totalCount, int colourCount, int centsBlack,
 			int centsColour, boolean isSingleSided) {
+		
+		int blackCount = totalCount - colourCount;
 		
 		int jobCost = 0; 
 		
