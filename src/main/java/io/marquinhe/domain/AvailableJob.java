@@ -15,12 +15,14 @@ public class AvailableJob {
 	private String papertype;
 	private boolean singleSided;
 	private int cents;
+	private boolean colour;
 
-	public AvailableJob(String papertype, boolean singleSided, int cost) {
+	public AvailableJob(String papertype, boolean singleSided, int cost, boolean colour) {
 		super();
 		this.papertype = papertype;
 		this.singleSided = singleSided;
 		this.cents = cost;
+		this.colour = colour;
 	}
 
 	public String getPapertype() {
@@ -46,5 +48,15 @@ public class AvailableJob {
 	public void setCents(int cost) {
 		this.cents = cost;
 	}
+
+	public boolean isColour() {
+		return colour;
+	}
+
+	public void setColour(boolean colour) {
+		this.colour = colour;
+	}
+	
+	
 
 }
